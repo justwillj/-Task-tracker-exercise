@@ -35,6 +35,19 @@ function TaskList() {
     },
   ]);
 
-  return <div></div>;
+  return (
+    <div>
+      <ul>
+        {tasks.map((item) => (
+          <div>
+            <button className="btn">+</button>
+            <li className="item" key={item.id}>
+              {item.item}
+            </li>
+          </div>
+        ))}
+      </ul>
+    </div>
+  );
 }
 export default TaskList;
