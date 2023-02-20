@@ -1,3 +1,4 @@
+import { useState } from "react";
 function TaskList() {
   const [tasks, setTasks] = useState([
     {
@@ -14,23 +15,23 @@ function TaskList() {
     },
     {
       id: 4,
-      item: "Do research about how React works",
+      item: "Create testing files",
     },
     {
       id: 5,
-      item: "Do research about how React works",
+      item: "Ensure software is updated with latest features",
     },
     {
       id: 6,
-      item: "Do research about how React works",
+      item: "Look over the requirements for the next project",
     },
     {
       id: 7,
-      item: "Do research about how React works",
+      item: "Understand and practice more with CSS",
     },
     {
       id: 8,
-      item: "Do research about how React works",
+      item: "Sign up for the next O3",
     },
   ]);
 
