@@ -1,49 +1,57 @@
 import { useState } from "react";
 function TaskList() {
+  const [todoList, setTodoList] = useState([]);
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      item: "Daily Standup",
+      task: "Daily Standup",
     },
     {
       id: 2,
-      item: "Code review the last project",
+      task: "Code review the last project",
     },
     {
       id: 3,
-      item: "Do research about how React works",
+      task: "Do research about how React works",
     },
     {
       id: 4,
-      item: "Create testing files",
+      task: "Create testing files",
     },
     {
       id: 5,
-      item: "Ensure software is updated with latest features",
+      task: "Ensure software is updated with latest features",
     },
     {
       id: 6,
-      item: "Look over the requirements for the next project",
+      task: "Look over the requirements for the next project",
     },
     {
       id: 7,
-      item: "Understand and practice more with CSS",
+      task: "Understand and practice more with CSS",
     },
     {
       id: 8,
-      item: "Sign up for the next O3",
+      task: "Sign up for the next O3",
     },
   ]);
+
+  const addTask = (task) => (e) => {
+    setTodoList([...todoList, task]);
+    todoList.push(task);
+  };
 
   return (
     <div className="tasks">
       <div className="task-list">
         <ul>
-          {tasks.map((item) => (
+          {tasks.map((task) => (
             <div>
-              <button className="btn">+</button>
-              <li className="item" key={item.id}>
-                {item.item}
+              <button className="btn" onClick={addTask}>
+                +
+              </button>
+              <li className="item" key={task.id}>
+                {task.task}
               </li>
             </div>
           ))}
