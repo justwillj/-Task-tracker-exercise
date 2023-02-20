@@ -51,7 +51,7 @@ function TaskList() {
   return (
     <div className="tasks">
       <div className="task-list">
-        <TaskHeader />
+        <TaskHeader tasks={tasks} setTasks={setTasks} />
         <ul>
           {tasks.map((task) => (
             <div>
