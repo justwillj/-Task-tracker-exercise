@@ -41,6 +41,11 @@ function TaskList() {
     todoList.push(task);
   };
 
+  const deleteTask = (taskIndex) => (e) => {
+    const listOfTask = todoList.filter((task, index) => index !== taskIndex);
+    setTodoList(listOfTask);
+  };
+
   return (
     <div className="tasks">
       <div className="task-list">
@@ -62,7 +67,9 @@ function TaskList() {
         <ul>
           {todoList.map((todo, index) => (
             <div>
-              <button className="completed-btn">Delete</button>
+              <button className="completed-btn" onClick={deleteTask(index)}>
+                Delete
+              </button>
               <li className="item" key={index.toString()}>
                 {todo}
               </li>
