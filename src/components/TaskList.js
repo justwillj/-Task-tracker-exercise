@@ -47,11 +47,24 @@ function TaskList() {
         <ul>
           {tasks.map((task) => (
             <div>
-              <button className="btn" onClick={addTask}>
+              <button className="btn" onClick={addTask(task.task)}>
                 +
               </button>
               <li className="item" key={task.id}>
                 {task.task}
+              </li>
+            </div>
+          ))}
+        </ul>
+      </div>
+
+      <div className="todo">
+        <ul>
+          {todoList.map((todo, index) => (
+            <div>
+              <button className="completed-btn">Delete</button>
+              <li className="item" key={index.toString()}>
+                {todo}
               </li>
             </div>
           ))}
