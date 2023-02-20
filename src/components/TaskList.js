@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TaskHeader from "./TaskHeader";
 function TaskList() {
   const [todoList, setTodoList] = useState([]);
   const [tasks, setTasks] = useState([
@@ -50,6 +51,7 @@ function TaskList() {
   return (
     <div className="tasks">
       <div className="task-list">
+        <TaskHeader />
         <ul>
           {tasks.map((task) => (
             <div>
