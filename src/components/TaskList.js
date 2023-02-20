@@ -40,7 +40,8 @@ function TaskList() {
     setTodoList([...todoList, task]);
     todoList.push(task);
   };
-
+  //  Link that helped me with how to remove a task when the user clicks on a button
+  //  https://www.robinwieruch.de/react-remove-item-from-list/
   const deleteTask = (taskIndex) => (e) => {
     const listOfTask = todoList.filter((task, index) => index !== taskIndex);
     setTodoList(listOfTask);
