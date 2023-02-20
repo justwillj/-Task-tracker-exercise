@@ -36,17 +36,19 @@ function TaskList() {
   ]);
 
   return (
-    <div>
-      <ul>
-        {tasks.map((item) => (
-          <div>
-            <button className="btn">+</button>
-            <li className="item" key={item.id}>
-              {item.item}
-            </li>
-          </div>
-        ))}
-      </ul>
+    <div className="tasks">
+      <div className="task-list">
+        <ul>
+          {tasks.map((item) => (
+            <div>
+              <button className="btn">+</button>
+              <li className="item" key={item.id}>
+                {item.item}
+              </li>
+            </div>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
