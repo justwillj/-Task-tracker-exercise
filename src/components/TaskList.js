@@ -42,7 +42,7 @@ function TaskList() {
 
   /**
    * Allows the user to click on a Task and add it to there Todo list
-   * @param {object} task - The task the user wants to put into there Todo list
+   * @param {string} task - The task the user wants to put into there Todo list
    */
   const addTask = (task) => (e) => {
     setTodoList([...todoList, task]);
@@ -70,7 +70,7 @@ function TaskList() {
               <button className="btn" onClick={addTask(task.task)}>
                 +
               </button>
-              <li className="item" key={task.id}>
+              <li key={task.id} className="item">
                 {task.task}
               </li>
             </div>

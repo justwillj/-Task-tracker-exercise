@@ -2,6 +2,9 @@ import { useState } from "react";
 function TaskHeader({ setTasks }) {
   const [newTask, setNewTask] = useState("");
 
+  /**
+   * Allows the user to add more Tasks to the Task list
+   */
   const addTask = () => {
     //Link that helped me with this
     //https://www.robinwieruch.de/react-add-item-to-list/
@@ -13,6 +16,10 @@ function TaskHeader({ setTasks }) {
     setNewTask("");
   };
 
+  /**
+   * Set the input back to blank once the user clicks on the add button
+   * @param {click} event
+   */
   const setInputBlank = (event) => {
     setNewTask(event.target.value);
   };
