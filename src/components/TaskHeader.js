@@ -6,7 +6,7 @@ function TaskHeader({ setTasks }) {
     //Link that helped me with this
     //https://www.robinwieruch.de/react-add-item-to-list/
     const task = {
-      id: Math.floor(Math.random() * 1000),
+      id: Math.floor(Math.random(9) * 1000),
       task: newTask,
     };
     setTasks((oldList) => [...oldList, task]);

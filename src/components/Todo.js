@@ -1,12 +1,12 @@
-function Todo({ newList }) {
+function Todo({ todoList }) {
   return (
     <div className="todo-header">
       <h1>My Todo List:</h1>
       <p>Please click done when finished with Task!</p>
-      {newList.length ? (
-        <p>You have {newList.length} pending task</p>
+      {todoList.length ? (
+        <p>You have {todoList.length} pending task</p>
       ) : (
-        <p>You have no pending tasks!!</p>
+        <p>You have no pending tasks!</p>
       )}
     </div>
   );

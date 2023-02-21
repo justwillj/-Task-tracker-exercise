@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TaskHeader from "./TaskHeader";
+import Todo from "./Todo";
 function TaskList() {
   const [todoList, setTodoList] = useState([]);
   const [tasks, setTasks] = useState([
@@ -60,7 +61,6 @@ function TaskList() {
               </button>
               <li className="item" key={task.id}>
                 {task.task}
-                {console.log(task.id)}
               </li>
             </div>
           ))}
@@ -68,6 +68,7 @@ function TaskList() {
       </div>
 
       <div className="todo">
+        <Todo todoList={todoList} />
         <ul>
           {todoList.map((todo, index) => (
             <div>
