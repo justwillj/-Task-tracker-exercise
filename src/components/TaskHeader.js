@@ -25,7 +25,9 @@ function TaskHeader({ setTasks }) {
         value={newTask}
         onChange={setInputBlank}
       ></input>
-      <button onClick={addTask}>Add</button>
+      <button className="add-btn" onClick={addTask}>
+        Add
+      </button>
       <p>Please pick a task!</p>
     </div>
   );

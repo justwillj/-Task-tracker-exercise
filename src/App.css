@@ -56,6 +56,22 @@ h1, h2 {
   background-color: #9c1458;
   border-color: #9c1458;
 }
+.add-btn{
+  font-size: large;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #59aa45;
+  color: white;
+  border: 1px solid #000000;
+  margin-top: 1px;
+  margin-left: 3px;
+}
+
+.add-btn:hover{
+  background-color: #9c1458;
+  border-color: #9c1458;
+}
 p{
   font-size: x-large;
 }
@@ -68,7 +84,17 @@ ul{
 li{
   font-size: large;
 }
-
+input{
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+ 
+}
 
 .item{
   border-radius: 10px;
