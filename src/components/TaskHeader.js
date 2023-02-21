@@ -1,22 +1,32 @@
 import { useState } from "react";
-function TaskHeader({ tasks, setTasks }) {
+function TaskHeader({ setTasks }) {
   const [newTask, setNewTask] = useState("");
 
   const addTask = () => {
     //Link that helped me with this
     //https://www.robinwieruch.de/react-add-item-to-list/
-    const task = tasks.concat({
-      id: Math.floor(Math.random() * 10000),
+    const task = {
+      id: Math.floor(Math.random() * 1000),
       task: newTask,
-    });
+    };
     setTasks((oldList) => [...oldList, task]);
     setNewTask("");
+    console.log(task.id);
+  };
+
+  const setInputBlank = (event) => {
+    setNewTask(event.target.value);
   };
   return (
     <div className="add-task">
       <h1>Tasks to do:</h1>
-      <input type="text" placeholder="Please enter new task!"></input>
-      <button>Add</button>
+      <input
+        type="text"
+        placeholder="Please enter new task!"
+        value={newTask}
+        onChange={setInputBlank}
+      ></input>
+      <button onClick={addTask}>Add</button>
       <p>Please pick a task!</p>
     </div>
   );

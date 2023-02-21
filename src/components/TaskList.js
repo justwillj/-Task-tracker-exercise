@@ -51,7 +51,7 @@ function TaskList() {
   return (
     <div className="tasks">
       <div className="task-list">
-        <TaskHeader tasks={tasks} setTasks={setTasks} />
+        <TaskHeader setTasks={setTasks} />
         <ul>
           {tasks.map((task) => (
             <div>
@@ -60,6 +60,7 @@ function TaskList() {
               </button>
               <li className="item" key={task.id}>
                 {task.task}
+                {console.log(task.id)}
               </li>
             </div>
           ))}
