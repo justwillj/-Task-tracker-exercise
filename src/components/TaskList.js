@@ -3,6 +3,8 @@ import TaskHeader from "./TaskHeader";
 import Todo from "./Todo";
 function TaskList() {
   const [todoList, setTodoList] = useState([]);
+  //Link that helped me with understanding list and keys better
+  //https://www.youtube.com/watch?v=Fcj6DQT3nVA
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -38,12 +40,21 @@ function TaskList() {
     },
   ]);
 
+  /**
+   * Allows the user to click on a Task and add it to there Todo list
+   * @param {object} task - The task the user wants to put into there Todo list
+   */
   const addTask = (task) => (e) => {
     setTodoList([...todoList, task]);
     todoList.push(task);
   };
+
   //  Link that helped me with how to remove a task when the user clicks on a button
   //  https://www.robinwieruch.de/react-remove-item-from-list/
+  /**
+   * Allows the user to click the delete button which then removes the task off there Todo list
+   * @param {number} taskIndex - The index of the task they want to delete
+   */
   const deleteTask = (taskIndex) => (e) => {
     const listOfTask = todoList.filter((task, index) => index !== taskIndex);
     setTodoList(listOfTask);
