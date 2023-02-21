@@ -66,13 +66,11 @@ function TaskList() {
         <TaskHeader setTasks={setTasks} />
         <ul>
           {tasks.map((task) => (
-            <div>
+            <div key={task.id}>
               <button className="btn" onClick={addTask(task.task)}>
                 +
               </button>
-              <li key={task.id} className="item">
-                {task.task}
-              </li>
+              <li className="item">{task.task}</li>
             </div>
           ))}
         </ul>
@@ -82,13 +80,11 @@ function TaskList() {
         <Todo todoList={todoList} />
         <ul>
           {todoList.map((todo, index) => (
-            <div>
+            <div key={index.toString()}>
               <button className="completed-btn" onClick={deleteTask(index)}>
                 Delete
               </button>
-              <li className="item" key={index.toString()}>
-                {todo}
-              </li>
+              <li className="item">{todo}</li>
             </div>
           ))}
         </ul>
