@@ -114,13 +114,14 @@ input {
   border-radius: 10px;
   height: 100%;
   width: 700px;
+  min-height: 645px;
   background-color: rgb(151, 151, 151);
 }
 
 .todo {
   border-radius: 10px;
   height: 100%;
-  min-height: 620px;
+  min-height: 645px;
   width: 700px;
   background-color: rgb(187, 189, 187);
 }
