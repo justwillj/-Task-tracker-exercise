@@ -8,12 +8,13 @@ body {
   background-color: #dfdfdf;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: xx-large;
   text-align: center;
   color: #333333;
 }
-.add-task{
+.add-task {
   text-align: center;
 }
 
@@ -29,7 +30,6 @@ h1, h2 {
   border: 1px solid #000000;
   margin-top: 1px;
   margin-left: 3px;
-
 }
 
 .btn:hover {
@@ -38,8 +38,8 @@ h1, h2 {
 }
 
 .completed-btn {
-  width: 58PX;
-  height: 45PX;
+  width: 58px;
+  height: 45px;
   position: absolute;
   font-size: large;
   cursor: pointer;
@@ -48,17 +48,16 @@ h1, h2 {
   color: white;
   border: 1px solid #000000;
   margin-left: 1px;
-  padding: 0rem .1rem;
-
+  padding: 0rem 0.1rem;
 }
 
 .completed-btn:hover {
   background-color: #9c1458;
   border-color: #9c1458;
 }
-.add-btn{
+.add-btn {
   font-size: large;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 4px;
   background-color: #59aa45;
@@ -68,23 +67,23 @@ h1, h2 {
   margin-left: 3px;
 }
 
-.add-btn:hover{
+.add-btn:hover {
   background-color: #9c1458;
   border-color: #9c1458;
 }
-p{
+p {
   font-size: x-large;
 }
 
-ul{
+ul {
   width: 100%;
   list-style: none;
   padding: 0 0.25rem 0.25rem;
 }
-li{
+li {
   font-size: large;
 }
-input{
+input {
   padding: 6px 12px;
   font-size: 16px;
   font-weight: 400;
@@ -93,34 +92,32 @@ input{
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 4px;
- 
 }
 
-.item{
+.item {
   border-radius: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: #dfdfdf;
-  padding: 0.5rem 0 1rem 2rem;
+  padding: 0.5rem 0.5rem 1rem 2rem;
   margin: 0.5rem 4rem;
-  
 }
 
-.tasks{
- display: flex;
- column-gap: 100px;
- padding: 120px;
+.tasks {
+  display: flex;
+  column-gap: 100px;
+  padding: 120px;
 }
 
-.task-list{
-    border-radius: 10px;
+.task-list {
+  border-radius: 10px;
   height: 100%;
   width: 700px;
   background-color: rgb(151, 151, 151);
 }
 
-.todo{
+.todo {
   border-radius: 10px;
   height: 100%;
   min-height: 620px;
